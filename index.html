@@ -1,18 +1,22 @@
 <!DOCTYPE html>
 <html lang="pt-BR" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <title>Julio Mota — Front-end Developer</title>
-    <meta name="description" content="Desenvolvedor Front-end com sólida fundação em HTML, CSS e JS. Experiência de produção em plataformas reais.">
-    
+    <meta name="description"
+        content="Desenvolvedor Front-end com sólida fundação em HTML, CSS e JS. Experiência de produção em plataformas reais.">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
-    
+
     <script>
         tailwind.config = {
             darkMode: 'class',
@@ -35,60 +39,133 @@
         }
     </script>
     <style>
-        body { font-family: 'Geist', sans-serif; background-color: #0a0a0a; color: #fff; overflow-x: hidden; }
-        .font-geist-mono { font-family: 'Geist Mono', monospace !important; }
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: #0a0a0a; }
-        ::-webkit-scrollbar-thumb { background: #262626; border-radius: 4px; }
-        ::-webkit-scrollbar-thumb:hover { background: #404040; }
-        
+        body {
+            font-family: 'Geist', sans-serif;
+            background-color: #0a0a0a;
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        .font-geist-mono {
+            font-family: 'Geist Mono', monospace !important;
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #0a0a0a;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #262626;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #404040;
+        }
+
         /* Reveal animations matching Jonathan's */
-        .reveal-up { opacity: 0; transform: translateY(30px); transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
-        .reveal-up.active { opacity: 1; transform: translateY(0); }
-        .delay-100 { transition-delay: 100ms; }
-        .delay-200 { transition-delay: 200ms; }
-        .delay-300 { transition-delay: 300ms; }
-        @keyframes cursor-blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
-        .typewriter-cursor { animation: cursor-blink 1s step-end infinite; }
+        .reveal-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .reveal-up.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .delay-100 {
+            transition-delay: 100ms;
+        }
+
+        .delay-200 {
+            transition-delay: 200ms;
+        }
+
+        .delay-300 {
+            transition-delay: 300ms;
+        }
+
+        @keyframes cursor-blink {
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0;
+            }
+        }
+
+        .typewriter-cursor {
+            animation: cursor-blink 1s step-end infinite;
+        }
     </style>
 </head>
+
 <body class="bg-neutral-950 text-white antialiased selection:bg-neutral-800 selection:text-white relative">
 
     <!-- Global Ambient Dark Glow (Emerald/Blue) -->
     <div class="fixed inset-0 z-0 pointer-events-none overflow-hidden">
-        <div class="absolute top-[-10%] sm:top-[-20%] right-[-20%] sm:right-[-10%] w-[500px] sm:w-[800px] h-[500px] sm:h-[800px] rounded-full bg-emerald-900/20 blur-[100px] sm:blur-[120px]"></div>
-        <div class="absolute top-[40%] left-[-30%] sm:left-[-20%] w-[400px] sm:w-[600px] h-[400px] sm:h-[600px] rounded-full bg-blue-900/10 blur-[100px] sm:blur-[120px]"></div>
+        <div
+            class="absolute top-[-10%] sm:top-[-20%] right-[-20%] sm:right-[-10%] w-[500px] sm:w-[800px] h-[500px] sm:h-[800px] rounded-full bg-emerald-900/20 blur-[100px] sm:blur-[120px]">
+        </div>
+        <div
+            class="absolute top-[40%] left-[-30%] sm:left-[-20%] w-[400px] sm:w-[600px] h-[400px] sm:h-[600px] rounded-full bg-blue-900/10 blur-[100px] sm:blur-[120px]">
+        </div>
     </div>
 
     <!-- Side Rail Navigation Fixed -->
     <aside class="hidden lg:block fixed left-6 top-1/2 -translate-y-1/2 z-30">
         <div class="flex flex-col gap-2 bg-neutral-900 border-white/10 border rounded-full p-2 shadow-2xl items-center">
-            <button class="group grid place-items-center hover:text-white hover:bg-white/10 transition relative text-neutral-500 w-10 h-10 rounded-full cursor-pointer" onclick="window.scrollTo(0,0)" role="button" aria-label="Home">
+            <button
+                class="group grid place-items-center hover:text-white hover:bg-white/10 transition relative text-neutral-500 w-10 h-10 rounded-full cursor-pointer"
+                onclick="window.scrollTo(0,0)" role="button" aria-label="Home">
                 <i class="w-4 h-4" data-lucide="home"></i>
-                <span class="absolute left-12 bg-white text-neutral-900 text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none font-geist-mono">Home</span>
+                <span
+                    class="absolute left-12 bg-white text-neutral-900 text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none font-geist-mono">Home</span>
             </button>
-            <button class="group grid place-items-center hover:text-white hover:bg-white/10 transition relative text-neutral-500 w-10 h-10 rounded-full cursor-pointer" onclick="window.location.href='#sobre'" role="button" aria-label="Sobre">
+            <button
+                class="group grid place-items-center hover:text-white hover:bg-white/10 transition relative text-neutral-500 w-10 h-10 rounded-full cursor-pointer"
+                onclick="window.location.href='#sobre'" role="button" aria-label="Sobre">
                 <i class="w-4 h-4" data-lucide="user"></i>
-                <span class="absolute left-12 bg-white text-neutral-900 text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none font-geist-mono">Sobre</span>
+                <span
+                    class="absolute left-12 bg-white text-neutral-900 text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none font-geist-mono">Sobre</span>
             </button>
-            <button class="group grid place-items-center hover:text-white hover:bg-white/10 transition relative text-neutral-500 w-10 h-10 rounded-full cursor-pointer" onclick="window.location.href='#skills'" role="button" aria-label="Skills">
+            <button
+                class="group grid place-items-center hover:text-white hover:bg-white/10 transition relative text-neutral-500 w-10 h-10 rounded-full cursor-pointer"
+                onclick="window.location.href='#skills'" role="button" aria-label="Skills">
                 <i class="w-4 h-4" data-lucide="code-2"></i>
-                <span class="absolute left-12 bg-white text-neutral-900 text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none font-geist-mono">Skills</span>
+                <span
+                    class="absolute left-12 bg-white text-neutral-900 text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none font-geist-mono">Skills</span>
             </button>
-            <button class="group grid place-items-center hover:text-white hover:bg-white/10 transition relative text-neutral-500 w-10 h-10 rounded-full cursor-pointer" onclick="window.location.href='#projetos'" role="button" aria-label="Projetos">
+            <button
+                class="group grid place-items-center hover:text-white hover:bg-white/10 transition relative text-neutral-500 w-10 h-10 rounded-full cursor-pointer"
+                onclick="window.location.href='#projetos'" role="button" aria-label="Projetos">
                 <i class="w-4 h-4" data-lucide="briefcase"></i>
-                <span class="absolute left-12 bg-white text-neutral-900 text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none font-geist-mono">Projetos</span>
+                <span
+                    class="absolute left-12 bg-white text-neutral-900 text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none font-geist-mono">Projetos</span>
             </button>
-            <button class="group grid place-items-center hover:text-white hover:bg-white/10 transition relative text-neutral-500 w-10 h-10 rounded-full cursor-pointer" onclick="window.location.href='#contato'" role="button" aria-label="Contato">
+            <button
+                class="group grid place-items-center hover:text-white hover:bg-white/10 transition relative text-neutral-500 w-10 h-10 rounded-full cursor-pointer"
+                onclick="window.location.href='#contato'" role="button" aria-label="Contato">
                 <i class="w-4 h-4" data-lucide="mail"></i>
-                <span class="absolute left-12 bg-white text-neutral-900 text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none font-geist-mono">Contato</span>
+                <span
+                    class="absolute left-12 bg-white text-neutral-900 text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none font-geist-mono">Contato</span>
             </button>
         </div>
     </aside>
 
     <main class="relative z-20 w-full overflow-hidden" id="main-content">
         <!-- Hero Section -->
-        <header class="relative w-full min-h-[100svh] flex flex-col justify-between p-[clamp(1.5rem,4vw,3rem)] lg:pl-28 z-10 pt-[clamp(2rem,6vw,4rem)]">
+        <header
+            class="relative w-full min-h-[100svh] flex flex-col justify-between p-[clamp(1.5rem,4vw,3rem)] lg:pl-28 z-10 pt-[clamp(2rem,6vw,4rem)]">
             <!-- Three.js Canvas Container -->
             <div id="canvas-container" class="absolute inset-0 z-0 pointer-events-none overflow-hidden"></div>
 
@@ -98,19 +175,24 @@
                     <i data-lucide="terminal" class="w-5 h-5 text-neutral-500"></i> JulioMota
                 </div>
                 <!-- Fully responsive Top Nav hiding logic -->
-                <nav class="hidden md:flex gap-6 lg:gap-8 text-[10px] lg:text-xs font-medium text-neutral-400 uppercase tracking-wide font-sans">
+                <nav
+                    class="hidden md:flex gap-6 lg:gap-8 text-[10px] lg:text-xs font-medium text-neutral-400 uppercase tracking-wide font-sans">
                     <a class="hover:text-white transition-colors" href="#sobre">sobre</a>
                     <a class="hover:text-white transition-colors" href="#skills">skills</a>
                     <a class="hover:text-white transition-colors" href="#projetos">projetos</a>
-                    <a class="hover:text-white transition-colors" href="https://www.linkedin.com/in/storckmota/" target="_blank">Linkedin</a>
+                    <a class="hover:text-white transition-colors" href="https://www.linkedin.com/in/storckmota/"
+                        target="_blank">Linkedin</a>
                 </nav>
             </div>
-            
+
             <!-- Hero Footer Content -->
-            <div class="flex flex-col lg:flex-row justify-end lg:justify-between items-center lg:items-end gap-12 w-full max-w-[1400px] mx-auto mb-4 z-10 py-16 lg:py-0 flex-1 relative">
+            <div
+                class="flex flex-col lg:flex-row justify-end lg:justify-between items-center lg:items-end gap-12 w-full max-w-[1400px] mx-auto mb-4 z-10 py-16 lg:py-0 flex-1 relative">
                 <!-- Left Info & Code Block -->
-                <div class="w-full max-w-sm space-y-6 flex-1 reveal-up order-2 lg:order-1 opacity-90 hover:opacity-100 transition-opacity duration-500">
-                    <div class="bg-neutral-950/60 backdrop-blur-sm border border-white/10 rounded-2xl p-4 shadow-xl font-mono text-[9px] sm:text-[10px] lg:text-[11px] text-neutral-400 leading-loose">
+                <div
+                    class="w-full max-w-sm space-y-6 flex-1 reveal-up order-2 lg:order-1 opacity-90 hover:opacity-100 transition-opacity duration-500">
+                    <div
+                        class="bg-neutral-950/60 backdrop-blur-sm border border-white/10 rounded-2xl p-4 shadow-xl font-mono text-[9px] sm:text-[10px] lg:text-[11px] text-neutral-400 leading-loose">
                         <div class="flex gap-1.5 mb-3">
                             <div class="w-1.5 h-1.5 rounded-full bg-red-500/80"></div>
                             <div class="w-1.5 h-1.5 rounded-full bg-amber-500/80"></div>
@@ -118,14 +200,19 @@
                         </div>
                         <div id="typewriter-container" class="min-h-[140px] w-full"></div>
                     </div>
-                    
+
                     <div class="flex flex-wrap items-center gap-4 sm:gap-6">
-                        <button class="group flex items-center gap-2 text-[10px] sm:text-xs font-bold tracking-widest uppercase border-b border-white pb-1 hover:text-neutral-400 hover:border-neutral-600 transition-all cursor-pointer" onclick="document.getElementById('sobre').scrollIntoView()">
-                            Explorar <span class="group-hover:translate-y-0.5 transition-transform duration-300">↓</span>
+                        <button
+                            class="group flex items-center gap-2 text-[10px] sm:text-xs font-bold tracking-widest uppercase border-b border-white pb-1 hover:text-neutral-400 hover:border-neutral-600 transition-all cursor-pointer"
+                            onclick="document.getElementById('sobre').scrollIntoView()">
+                            Explorar <span
+                                class="group-hover:translate-y-0.5 transition-transform duration-300">↓</span>
                         </button>
-                        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-green-500/10 text-green-400 border border-green-500/20 text-[10px] sm:text-xs font-geist-mono">
+                        <div
+                            class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-green-500/10 text-green-400 border border-green-500/20 text-[10px] sm:text-xs font-geist-mono">
                             <span class="relative flex h-2 w-2">
-                                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                                <span
+                                    class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
                                 <span class="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
                             </span>
                             Aberto a Oportunidades
@@ -135,29 +222,37 @@
 
                 <!-- Right Title -->
                 <div class="w-full flex-1 text-left lg:text-right reveal-up delay-100 order-1 lg:order-2 self-end">
-                    <h1 class="text-[clamp(3.25rem,8vw,7.5rem)] font-semibold tracking-tighter leading-[0.9] text-white">
+                    <h1
+                        class="text-[clamp(3.25rem,8vw,7.5rem)] font-semibold tracking-tighter leading-[0.9] text-white">
                         <span class="block">Desenvolvedor</span>
-                        <span class="block text-neutral-500">Front-end.</span>
+                        <span class="block text-neutral-500">Fullstack.</span>
                     </h1>
-                    <p class="text-[clamp(1rem,2vw,1.25rem)] text-neutral-400 font-normal mt-6 tracking-tight max-w-[clamp(24rem,30vw,36rem)] lg:ml-auto leading-relaxed">
-                        Construindo interfaces reais e funcionais <span class="text-[0.7em] text-neutral-500 opacity-70 ml-1 inline-block">desde 2021.</span>
+                    <p
+                        class="text-[clamp(1rem,2vw,1.25rem)] text-neutral-400 font-normal mt-6 tracking-tight max-w-[clamp(24rem,30vw,36rem)] lg:ml-auto leading-relaxed">
+                        Construindo interfaces reais e funcionais <span
+                            class="text-[0.7em] text-neutral-500 opacity-70 ml-1 inline-block">desde 2021.</span>
                     </p>
                 </div>
             </div>
         </header>
 
         <!-- Profile & Intro Section -->
-        <section id="sobre" class="relative px-[clamp(1.5rem,5vw,4rem)] lg:pl-28 py-[clamp(4rem,8vw,6rem)] border-t border-white/10 bg-neutral-950/80 backdrop-blur-sm z-10 w-full">
+        <section id="sobre"
+            class="relative px-[clamp(1.5rem,5vw,4rem)] lg:pl-28 py-[clamp(4rem,8vw,6rem)] border-t border-white/10 bg-neutral-950/80 backdrop-blur-sm z-10 w-full">
             <div class="max-w-6xl mx-auto">
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
                     <!-- Profile Photo Section -->
                     <div class="lg:col-span-5 reveal-up w-full max-w-md mx-auto lg:max-w-none">
-                        <div class="relative overflow-hidden bg-neutral-900 border border-white/5 rounded-2xl aspect-square md:aspect-[4/5] group">
-                            <div class="absolute inset-0 bg-neutral-950/20 group-hover:bg-transparent transition-colors duration-700 z-10"></div>
-                            <img src="Edit_the_provided_202603251407.png" alt="Julio Mota" class="w-full h-full object-cover object-center opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700 relative z-0">
+                        <div
+                            class="relative overflow-hidden bg-neutral-900 border border-white/5 rounded-2xl aspect-square md:aspect-[4/5] group">
+                            <div
+                                class="absolute inset-0 bg-neutral-950/20 group-hover:bg-transparent transition-colors duration-700 z-10">
+                            </div>
+                            <img src="Edit_the_provided_202603251407.png" alt="Julio Mota"
+                                class="w-full h-full object-cover object-center opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700 relative z-0">
                         </div>
                     </div>
-                    
+
                     <!-- Content Section -->
                     <div class="lg:col-span-7 reveal-up delay-100">
                         <div class="flex flex-col justify-center h-full">
@@ -165,15 +260,23 @@
                                 <i class="w-4 h-4 text-neutral-500" data-lucide="arrow-down-right"></i>
                                 <div class="h-px flex-1 bg-white/10"></div>
                             </div>
-                            <h2 class="text-[clamp(1.5rem,3vw,2.25rem)] font-semibold text-white mb-[clamp(1.5rem,3vw,2rem)] tracking-tight">Muito prazer, sou o Julio.</h2>
-                            <p class="text-[clamp(1rem,1.5vw,1.125rem)] leading-relaxed text-neutral-400 mb-[clamp(2rem,4vw,3rem)] font-geist-mono">
-                                Sou desenvolvedor Front-end focado em criar produtos web reais com fundamentos sólidos. Acredito que o verdadeiro impacto vem do domínio da base — HTML, CSS e JavaScript — antes de qualquer atalho. Minha experiência envolve manter e evoluir aplicações em ambiente de produção real (Surfguru), lidando com usuários de verdade e problemas reais.
+                            <h2
+                                class="text-[clamp(1.5rem,3vw,2.25rem)] font-semibold text-white mb-[clamp(1.5rem,3vw,2rem)] tracking-tight">
+                                Muito prazer, sou o Julio.</h2>
+                            <p
+                                class="text-[clamp(1rem,1.5vw,1.125rem)] leading-relaxed text-neutral-400 mb-[clamp(2rem,4vw,3rem)] font-geist-mono">
+                                Sou desenvolvedor Front-end focado em criar produtos web reais com fundamentos sólidos.
+                                Acredito que o verdadeiro impacto vem do domínio da base — HTML, CSS e JavaScript —
+                                antes de qualquer atalho. Minha experiência envolve manter e evoluir aplicações em
+                                ambiente de produção real (Surfguru), lidando com usuários de verdade e problemas reais.
                             </p>
-                            
+
                             <!-- Skills Array -->
                             <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-4 mb-10 w-full">
                                 <div class="space-y-3">
-                                    <h3 class="text-xs sm:text-sm font-semibold text-white font-geist-mono uppercase tracking-wide">FUNDAÇÃO</h3>
+                                    <h3
+                                        class="text-xs sm:text-sm font-semibold text-white font-geist-mono uppercase tracking-wide">
+                                        FUNDAÇÃO</h3>
                                     <ul class="text-sm text-neutral-500 space-y-2">
                                         <li class="font-geist-mono">• HTML5 Semântico</li>
                                         <li class="font-geist-mono">• CSS3 Avançado</li>
@@ -181,20 +284,25 @@
                                     </ul>
                                 </div>
                                 <div class="space-y-3">
-                                    <h3 class="text-xs sm:text-sm font-semibold text-white font-geist-mono uppercase tracking-wide">APLICAÇÃO</h3>
+                                    <h3
+                                        class="text-xs sm:text-sm font-semibold text-white font-geist-mono uppercase tracking-wide">
+                                        APLICAÇÃO</h3>
                                     <ul class="text-sm text-neutral-500 space-y-2">
-                                        <li class="font-geist-mono">• React & TypeScript</li>
-                                        <li class="font-geist-mono">• PHP (Surfguru)</li>
-                                        <li class="font-geist-mono">• Arquitetura de Produção</li>
+                                        <li class="font-geist-mono">• React, Next.js & Node.js</li>
+                                        <li class="font-geist-mono">• TypeScript em Produção</li>
+                                        <li class="font-geist-mono">• APIs RESTful & PostgreSQL</li>
+                                        <li class="font-geist-mono">• CI/CD</li>
                                     </ul>
                                 </div>
                             </div>
-                            
+
                             <div class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
-                                <a class="w-full sm:w-auto px-6 py-3 rounded-lg bg-white text-black font-medium hover:bg-neutral-200 transition-colors font-geist-mono text-sm text-center" href="#projetos">
+                                <a class="w-full sm:w-auto px-6 py-3 rounded-lg bg-white text-black font-medium hover:bg-neutral-200 transition-colors font-geist-mono text-sm text-center"
+                                    href="#projetos">
                                     Ver projetos
                                 </a>
-                                <a class="w-full sm:w-auto px-6 py-3 rounded-lg border border-white/20 text-white font-medium hover:bg-white/10 transition-colors font-geist-mono text-sm text-center" href="https://www.linkedin.com/in/storckmota/" target="_blank">
+                                <a class="w-full sm:w-auto px-6 py-3 rounded-lg border border-white/20 text-white font-medium hover:bg-white/10 transition-colors font-geist-mono text-sm text-center"
+                                    href="https://www.linkedin.com/in/storckmota/" target="_blank">
                                     Conectar no LinkedIn
                                 </a>
                             </div>
@@ -205,41 +313,57 @@
         </section>
 
         <!-- Services Section (Skills) mapped to exact Jonathan Services format -->
-        <section id="skills" class="relative px-[clamp(1.5rem,5vw,4rem)] lg:pl-28 bg-neutral-900 border-t border-white/10 z-10 w-full">
+        <section id="skills"
+            class="relative px-[clamp(1.5rem,5vw,4rem)] lg:pl-28 bg-neutral-900 border-t border-white/10 z-10 w-full">
             <div class="py-[clamp(4rem,10vw,6rem)] max-w-6xl mx-auto w-full">
                 <div class="mb-16 reveal-up">
                     <div class="flex items-center gap-3 mb-6">
-                        <span class="text-xs font-bold text-neutral-500 uppercase tracking-widest font-geist-mono">Skills</span>
+                        <span
+                            class="text-xs font-bold text-neutral-500 uppercase tracking-widest font-geist-mono">Skills</span>
                         <div class="h-px flex-1 bg-white/10"></div>
                     </div>
-                    <h2 class="text-[clamp(1.875rem,4vw,2.25rem)] font-semibold tracking-tight text-white mb-[clamp(1rem,2vw,1.5rem)]">Conhecimento Técnico</h2>
-                    <p class="text-[clamp(1rem,1.5vw,1.125rem)] text-neutral-400 font-geist-mono max-w-2xl">O que domino, o que opero e onde tenho vivência prática.</p>
+                    <h2
+                        class="text-[clamp(1.875rem,4vw,2.25rem)] font-semibold tracking-tight text-white mb-[clamp(1rem,2vw,1.5rem)]">
+                        Conhecimento Técnico</h2>
+                    <p class="text-[clamp(1rem,1.5vw,1.125rem)] text-neutral-400 font-geist-mono max-w-2xl">Tenho experiência sólida com React, Next.js, Node.js e TypeScript em ambientes de produção, experiência com APIs RESTful, otimização de banco de dados PostgreSQL e CI/CD.</p>
                 </div>
-                
+
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 w-full">
                     <!-- Base -->
-                    <div class="group bg-neutral-950 border border-white/10 rounded-2xl p-6 hover:shadow-[0_20px_40px_-15px_rgba(255,255,255,0.05)] hover:border-white/20 transition-all duration-300 reveal-up w-full">
-                        <div class="h-48 mb-6 bg-neutral-900 rounded-xl overflow-hidden relative border border-white/5 flex items-center justify-center">
+                    <div
+                        class="group bg-neutral-950 border border-white/10 rounded-2xl p-6 hover:shadow-[0_20px_40px_-15px_rgba(255,255,255,0.05)] hover:border-white/20 transition-all duration-300 reveal-up w-full">
+                        <div
+                            class="h-48 mb-6 bg-neutral-900 rounded-xl overflow-hidden relative border border-white/5 flex items-center justify-center">
                             <!-- Abstract structure graphic representing foundations -->
                             <div class="relative w-16 h-16 group-hover:scale-110 transition-transform duration-500">
-                                <div class="absolute inset-0 bg-neutral-700/30 border border-white/10 rounded-lg transform -translate-x-3 translate-y-3"></div>
-                                <div class="absolute inset-0 bg-neutral-600/40 border border-white/20 rounded-lg transform -translate-x-1.5 translate-y-1.5 backdrop-blur-sm"></div>
-                                <div class="absolute inset-0 bg-neutral-800 border border-white/30 rounded-lg shadow-2xl flex items-center justify-center font-geist-mono text-neutral-400 text-xs text-center">&lt;/&gt;</div>
+                                <div
+                                    class="absolute inset-0 bg-neutral-700/30 border border-white/10 rounded-lg transform -translate-x-3 translate-y-3">
+                                </div>
+                                <div
+                                    class="absolute inset-0 bg-neutral-600/40 border border-white/20 rounded-lg transform -translate-x-1.5 translate-y-1.5 backdrop-blur-sm">
+                                </div>
+                                <div
+                                    class="absolute inset-0 bg-neutral-800 border border-white/30 rounded-lg shadow-2xl flex items-center justify-center font-geist-mono text-neutral-400 text-xs text-center">
+                                    &lt;/&gt;</div>
                             </div>
                         </div>
-                        <div class="inline-flex gap-2 bg-blue-500/10 text-blue-400 px-3 py-1 rounded-full text-xs font-medium font-geist-mono mb-4 border border-blue-500/20">
+                        <div
+                            class="inline-flex gap-2 bg-blue-500/10 text-blue-400 px-3 py-1 rounded-full text-xs font-medium font-geist-mono mb-4 border border-blue-500/20">
                             <i class="w-3 h-3" data-lucide="check-circle"></i> Foco Principal
                         </div>
                         <h3 class="text-xl font-semibold text-white mb-3">Fundação Sólida</h3>
-                        <p class="text-neutral-400 text-sm leading-relaxed font-geist-mono mb-6">Tecnologias que opero com alto nível de confiança, construindo layouts precisos e lógicas puras.</p>
+                        <p class="text-neutral-400 text-sm leading-relaxed font-geist-mono mb-6">Tecnologias que opero
+                            com alto nível de confiança, construindo layouts precisos e lógicas puras.</p>
                         <div class="flex flex-wrap gap-2 text-[10px] sm:text-xs font-geist-mono text-neutral-500">
                             <span>HTML5</span> • <span>CSS3</span> • <span>JavaScript</span> • <span>Git</span>
                         </div>
                     </div>
 
                     <!-- Prática -->
-                    <div class="group bg-neutral-950 border border-white/10 rounded-2xl p-6 hover:shadow-[0_20px_40px_-15px_rgba(255,255,255,0.05)] hover:border-white/20 transition-all duration-300 reveal-up delay-100 w-full">
-                        <div class="h-48 mb-6 bg-neutral-900 rounded-xl overflow-hidden relative border border-white/5 flex flex-col">
+                    <div
+                        class="group bg-neutral-950 border border-white/10 rounded-2xl p-6 hover:shadow-[0_20px_40px_-15px_rgba(255,255,255,0.05)] hover:border-white/20 transition-all duration-300 reveal-up delay-100 w-full">
+                        <div
+                            class="h-48 mb-6 bg-neutral-900 rounded-xl overflow-hidden relative border border-white/5 flex flex-col">
                             <div class="flex items-center px-3 py-2 border-b border-white/5 bg-neutral-950/50">
                                 <div class="flex gap-1.5">
                                     <div class="w-2 h-2 rounded-full bg-red-500"></div>
@@ -247,33 +371,46 @@
                                     <div class="w-2 h-2 rounded-full bg-green-500"></div>
                                 </div>
                             </div>
-                            <div class="p-4 font-geist-mono text-[10px] sm:text-xs text-neutral-500 leading-relaxed overflow-hidden">
-                                <span class="text-purple-400">import</span> React <span class="text-purple-400">from</span> <span class="text-green-400">'react'</span>;<br><br>
-                                <span class="text-purple-400">export const</span> <span class="text-blue-400">App</span> = () =&gt; {<br>
-                                &nbsp;&nbsp;<span class="text-purple-400">return</span> &lt;<span class="text-blue-400">System</span> /&gt;;<br>
+                            <div
+                                class="p-4 font-geist-mono text-[10px] sm:text-xs text-neutral-500 leading-relaxed overflow-hidden">
+                                <span class="text-purple-400">import</span> React <span
+                                    class="text-purple-400">from</span> <span
+                                    class="text-green-400">'react'</span>;<br><br>
+                                <span class="text-purple-400">export const</span> <span class="text-blue-400">App</span>
+                                = () =&gt; {<br>
+                                &nbsp;&nbsp;<span class="text-purple-400">return</span> &lt;<span
+                                    class="text-blue-400">System</span> /&gt;;<br>
                                 }
                             </div>
                         </div>
-                        <div class="inline-flex gap-2 bg-emerald-500/10 text-emerald-400 px-3 py-1 rounded-full text-[10px] sm:text-xs font-medium font-geist-mono mb-4 border border-emerald-500/20">
+                        <div
+                            class="inline-flex gap-2 bg-emerald-500/10 text-emerald-400 px-3 py-1 rounded-full text-[10px] sm:text-xs font-medium font-geist-mono mb-4 border border-emerald-500/20">
                             <i class="w-3 h-3" data-lucide="tool"></i> Ferramentas
                         </div>
                         <h3 class="text-xl font-semibold text-white mb-3">Conhecimento Prático</h3>
-                        <p class="text-neutral-400 text-sm leading-relaxed font-geist-mono mb-6">Frameworks e ferramentas que integro e utilizo para desenvolver ecossistemas reativos e dinâmicos.</p>
+                        <p class="text-neutral-400 text-sm leading-relaxed font-geist-mono mb-6">Frameworks e ferramentas que integro e utilizo para desenvolver ecossistemas reativos e APIs escaláveis.</p>
                         <div class="flex flex-wrap gap-2 text-[10px] sm:text-xs font-geist-mono text-neutral-500">
-                            <span>React</span> • <span>TypeScript</span> • <span>PHP</span>
+                            <span>React</span> • <span>Next.js</span> • <span>Node.js</span> • <span>TypeScript</span> • <span>APIs RESTful</span>
                         </div>
                     </div>
 
                     <!-- Vivência (Dashboard Mockup) -->
-                    <div class="group bg-neutral-950 border border-white/10 rounded-2xl p-6 hover:shadow-[0_20px_40px_-15px_rgba(255,255,255,0.05)] hover:border-white/20 transition-all duration-300 reveal-up delay-200 w-full sm:col-span-2 lg:col-span-1">
-                        <div class="h-48 mb-6 bg-neutral-900 rounded-xl overflow-hidden relative border border-white/5 flex flex-col p-4 opacity-70 group-hover:opacity-100 transition-opacity">
+                    <div
+                        class="group bg-neutral-950 border border-white/10 rounded-2xl p-6 hover:shadow-[0_20px_40px_-15px_rgba(255,255,255,0.05)] hover:border-white/20 transition-all duration-300 reveal-up delay-200 w-full sm:col-span-2 lg:col-span-1">
+                        <div
+                            class="h-48 mb-6 bg-neutral-900 rounded-xl overflow-hidden relative border border-white/5 flex flex-col p-4 opacity-70 group-hover:opacity-100 transition-opacity">
                             <div class="flex justify-between items-center mb-4">
-                                <div class="flex gap-2"><div class="w-8 md:w-16 h-2 rounded-full bg-neutral-700"></div><div class="w-4 md:w-8 h-2 rounded-full bg-neutral-800"></div></div>
+                                <div class="flex gap-2">
+                                    <div class="w-8 md:w-16 h-2 rounded-full bg-neutral-700"></div>
+                                    <div class="w-4 md:w-8 h-2 rounded-full bg-neutral-800"></div>
+                                </div>
                                 <div class="w-4 h-4 rounded bg-neutral-700"></div>
                             </div>
                             <div class="flex gap-3 h-full">
                                 <div class="w-1/4 h-full flex flex-col gap-2">
-                                    <div class="w-full h-6 rounded shrink-0 bg-emerald-500/10 border border-emerald-500/20"></div>
+                                    <div
+                                        class="w-full h-6 rounded shrink-0 bg-emerald-500/10 border border-emerald-500/20">
+                                    </div>
                                     <div class="w-full h-6 rounded shrink-0 bg-neutral-800"></div>
                                     <div class="w-full h-6 rounded shrink-0 bg-neutral-800"></div>
                                 </div>
@@ -283,13 +420,14 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="inline-flex gap-2 bg-purple-500/10 text-purple-400 px-3 py-1 rounded-full text-[10px] sm:text-xs font-medium font-geist-mono mb-4 border border-purple-500/20">
+                        <div
+                            class="inline-flex gap-2 bg-purple-500/10 text-purple-400 px-3 py-1 rounded-full text-[10px] sm:text-xs font-medium font-geist-mono mb-4 border border-purple-500/20">
                             <i class="w-3 h-3" data-lucide="database"></i> Produção
                         </div>
                         <h3 class="text-xl font-semibold text-white mb-3">Vivência e Exposição</h3>
-                        <p class="text-neutral-400 text-sm leading-relaxed font-geist-mono mb-6">Ambiente e stack com os quais interajo no dia a dia ajudando a evoluir infraestruturas reais no Surfguru.</p>
+                        <p class="text-neutral-400 text-sm leading-relaxed font-geist-mono mb-6">Ambiente e stack com os quais interajo evoluindo infraestruturas, incluindo otimização de banco de dados e pipelines.</p>
                         <div class="flex flex-wrap gap-2 text-[10px] sm:text-xs font-geist-mono text-neutral-500">
-                            <span>MySQL</span> • <span>CakePHP 4</span> • <span>Tailwind</span>
+                            <span>PostgreSQL</span> • <span>CI/CD</span> • <span>MySQL</span> • <span>Tailwind</span>
                         </div>
                     </div>
                 </div>
@@ -297,49 +435,74 @@
         </section>
 
         <!-- Education (Accordion Pattern + Expanded Descriptions) -->
-        <section id="formacao" class="relative px-[clamp(1.5rem,5vw,4rem)] lg:pl-28 bg-neutral-950 border-t border-white/10 z-10 w-full">
+        <section id="formacao"
+            class="relative px-[clamp(1.5rem,5vw,4rem)] lg:pl-28 bg-neutral-950 border-t border-white/10 z-10 w-full">
             <div class="mx-auto max-w-6xl py-[clamp(4rem,10vw,6rem)] w-full">
                 <div class="mb-16 reveal-up">
                     <div class="flex items-center gap-3 mb-6">
-                        <span class="text-xs font-bold text-neutral-500 uppercase tracking-widest font-geist-mono">Educação</span>
+                        <span
+                            class="text-xs font-bold text-neutral-500 uppercase tracking-widest font-geist-mono">Educação</span>
                         <div class="h-px flex-1 bg-white/10"></div>
                     </div>
-                    <h2 class="text-[clamp(1.875rem,4vw,2.25rem)] font-semibold tracking-tight text-white mb-[clamp(1rem,2vw,1.5rem)]">Estudos & Evolução</h2>
-                    <p class="text-[clamp(1rem,1.5vw,1.125rem)] text-neutral-400 max-w-2xl font-geist-mono">Busca contínua por aprimoramento e compreensão estrutural.</p>
+                    <h2
+                        class="text-[clamp(1.875rem,4vw,2.25rem)] font-semibold tracking-tight text-white mb-[clamp(1rem,2vw,1.5rem)]">
+                        Estudos & Evolução</h2>
+                    <p class="text-[clamp(1rem,1.5vw,1.125rem)] text-neutral-400 max-w-2xl font-geist-mono">Busca
+                        contínua por aprimoramento e compreensão estrutural.</p>
                 </div>
-                
+
                 <div class="border border-white/10 bg-neutral-900 rounded-3xl overflow-hidden reveal-up w-full">
                     <!-- Andamento -->
                     <details class="group border-b border-white/10" open>
-                        <summary class="list-none flex items-center justify-between p-5 sm:p-8 cursor-pointer hover:bg-white/[0.02] transition-colors focus:ring focus:ring-inset focus:ring-neutral-700 outline-none">
+                        <summary
+                            class="list-none flex items-center justify-between p-5 sm:p-8 cursor-pointer hover:bg-white/[0.02] transition-colors focus:ring focus:ring-inset focus:ring-neutral-700 outline-none">
                             <div class="flex items-center gap-3 sm:gap-4">
                                 <span class="text-neutral-500 text-[10px] sm:text-xs font-mono shrink-0">(ATIVO)</span>
-                                <h3 class="text-base sm:text-lg md:text-xl font-medium text-white">Cursos em Andamento</h3>
+                                <h3 class="text-base sm:text-lg md:text-xl font-medium text-white">Cursos em Andamento
+                                </h3>
                             </div>
-                            <div class="w-6 h-6 sm:w-8 sm:h-8 rounded-full border border-white/20 flex items-center justify-center shrink-0">
-                                <i data-lucide="plus" class="w-3 h-3 sm:w-4 sm:h-4 text-neutral-400 group-open:hidden"></i>
-                                <i data-lucide="minus" class="w-3 h-3 sm:w-4 sm:h-4 text-neutral-400 hidden group-open:block"></i>
+                            <div
+                                class="w-6 h-6 sm:w-8 sm:h-8 rounded-full border border-white/20 flex items-center justify-center shrink-0">
+                                <i data-lucide="plus"
+                                    class="w-3 h-3 sm:w-4 sm:h-4 text-neutral-400 group-open:hidden"></i>
+                                <i data-lucide="minus"
+                                    class="w-3 h-3 sm:w-4 sm:h-4 text-neutral-400 hidden group-open:block"></i>
                             </div>
                         </summary>
                         <div class="p-5 sm:p-8 pt-0 text-neutral-400 text-sm grid gap-8 w-full">
                             <div>
-                                <p class="text-white font-medium text-sm sm:text-base mb-2 select-text">curso.dev (Felipe Deschamps)</p>
-                                <p class="font-geist-mono leading-relaxed text-neutral-500 select-text text-xs sm:text-sm">
-                                    O curso aborda os fundamentos da engenharia de software em profundidade — Git, GitHub, estratégias de branch, Node.js, Next.js, React, PostgreSQL, Docker, CI/CD com GitHub Actions, testes automatizados (Jest, TDD, BDD), APIs REST, segurança (bcrypt, injeção de SQL, sessões, cookies), clean code, refatoração e tomada de decisões arquiteturais. O foco é entender o porquê da existência de cada tecnologia, e não apenas como utilizá-las.
+                                <p class="text-white font-medium text-sm sm:text-base mb-2 select-text">curso.dev
+                                    (Felipe Deschamps)</p>
+                                <p
+                                    class="font-geist-mono leading-relaxed text-neutral-500 select-text text-xs sm:text-sm">
+                                    O curso aborda os fundamentos da engenharia de software em profundidade — Git,
+                                    GitHub, estratégias de branch, Node.js, Next.js, React, PostgreSQL, Docker, CI/CD
+                                    com GitHub Actions, testes automatizados (Jest, TDD, BDD), APIs REST, segurança
+                                    (bcrypt, injeção de SQL, sessões, cookies), clean code, refatoração e tomada de
+                                    decisões arquiteturais. O foco é entender o porquê da existência de cada tecnologia,
+                                    e não apenas como utilizá-las.
                                 </p>
                             </div>
                             <div class="h-px w-full bg-white/5"></div>
                             <div>
-                                <p class="text-white font-medium text-sm sm:text-base mb-2 select-text">Asimov Academy — Python</p>
-                                <p class="font-geist-mono leading-relaxed text-neutral-500 select-text text-xs sm:text-sm">
-                                    Foco em Python com aplicação prática. Aborda fundamentos, lógica, programação orientada a objetos e projetos do mundo real. O objetivo é construir um raciocínio sólido além do ecossistema JavaScript.
+                                <p class="text-white font-medium text-sm sm:text-base mb-2 select-text">Asimov Academy —
+                                    Python</p>
+                                <p
+                                    class="font-geist-mono leading-relaxed text-neutral-500 select-text text-xs sm:text-sm">
+                                    Foco em Python com aplicação prática. Aborda fundamentos, lógica, programação
+                                    orientada a objetos e projetos do mundo real. O objetivo é construir um raciocínio
+                                    sólido além do ecossistema JavaScript.
                                 </p>
                             </div>
                             <div class="h-px w-full bg-white/5"></div>
                             <div>
-                                <p class="text-white font-medium text-sm sm:text-base mb-2 select-text">EBAC — Engenheiro Front-End (em andamento)</p>
-                                <p class="font-geist-mono leading-relaxed text-neutral-500 select-text text-xs sm:text-sm">
-                                    Módulos concluídos: Fundamentos da Web, HTML5, CSS3, JavaScript, Git & GitHub, Lógica, OOP, APIs Web, HTTP, JavaScript Avançado, Responsive Web Design. Estudando atualmente: Metodologia BEM. Próximos passos: SASS, Bootstrap, Tailwind CSS.
+                                <p class="text-white font-medium text-sm sm:text-base mb-2 select-text">EBAC —
+                                    Engenheiro Front-End (em andamento)</p>
+                                <p
+                                    class="font-geist-mono leading-relaxed text-neutral-500 select-text text-xs sm:text-sm">
+                                    Módulos concluídos: Fundamentos da Web, HTML5, CSS3, JavaScript, Git & GitHub,
+                                    Lógica, OOP, APIs Web, HTTP, JavaScript Avançado, Responsive Web Design. Estudando
+                                    atualmente: Metodologia BEM. Próximos passos: SASS, Bootstrap, Tailwind CSS.
                                 </p>
                             </div>
                         </div>
@@ -347,14 +510,19 @@
 
                     <!-- Certificados -->
                     <details class="group">
-                        <summary class="list-none flex items-center justify-between p-5 sm:p-8 cursor-pointer hover:bg-white/[0.02] transition-colors focus:ring focus:ring-inset focus:ring-neutral-700 outline-none">
+                        <summary
+                            class="list-none flex items-center justify-between p-5 sm:p-8 cursor-pointer hover:bg-white/[0.02] transition-colors focus:ring focus:ring-inset focus:ring-neutral-700 outline-none">
                             <div class="flex items-center gap-3 sm:gap-4">
                                 <span class="text-neutral-500 text-[10px] sm:text-xs font-mono shrink-0">(CHECK)</span>
-                                <h3 class="text-base sm:text-lg md:text-xl font-medium text-white">Certificações Práticas</h3>
+                                <h3 class="text-base sm:text-lg md:text-xl font-medium text-white">Certificações
+                                    Práticas</h3>
                             </div>
-                            <div class="w-6 h-6 sm:w-8 sm:h-8 rounded-full border border-white/20 flex items-center justify-center shrink-0">
-                                <i data-lucide="plus" class="w-3 h-3 sm:w-4 sm:h-4 text-neutral-400 group-open:hidden"></i>
-                                <i data-lucide="minus" class="w-3 h-3 sm:w-4 sm:h-4 text-neutral-400 hidden group-open:block"></i>
+                            <div
+                                class="w-6 h-6 sm:w-8 sm:h-8 rounded-full border border-white/20 flex items-center justify-center shrink-0">
+                                <i data-lucide="plus"
+                                    class="w-3 h-3 sm:w-4 sm:h-4 text-neutral-400 group-open:hidden"></i>
+                                <i data-lucide="minus"
+                                    class="w-3 h-3 sm:w-4 sm:h-4 text-neutral-400 hidden group-open:block"></i>
                             </div>
                         </summary>
                         <div class="p-5 sm:p-8 pt-0 text-neutral-400 text-xs sm:text-sm w-full overflow-hidden">
@@ -370,43 +538,61 @@
         </section>
 
         <!-- Selected Work Section -->
-        <section id="projetos" class="relative px-[clamp(1.5rem,5vw,4rem)] lg:pl-28 bg-neutral-950 border-t border-white/10 z-10 w-full">
+        <section id="projetos"
+            class="relative px-[clamp(1.5rem,5vw,4rem)] lg:pl-28 bg-neutral-950 border-t border-white/10 z-10 w-full">
             <div class="mx-auto max-w-6xl py-[clamp(4rem,10vw,6rem)] w-full">
                 <div class="mb-16 reveal-up">
                     <div class="flex items-center gap-3 mb-6">
-                        <span class="text-xs font-bold text-neutral-500 uppercase tracking-widest font-geist-mono">Projetos Selecionados</span>
+                        <span
+                            class="text-xs font-bold text-neutral-500 uppercase tracking-widest font-geist-mono">Projetos
+                            Selecionados</span>
                         <div class="h-px flex-1 bg-white/10"></div>
                     </div>
-                    <h2 class="text-[clamp(1.875rem,4vw,2.25rem)] font-semibold tracking-tight text-white mb-[clamp(1rem,2vw,1.5rem)]">Projetos & Case</h2>
-                    <p class="text-[clamp(1rem,1.5vw,1.125rem)] text-neutral-400 max-w-2xl font-geist-mono">Um pouco da minha realidade diária de produção.</p>
+                    <h2
+                        class="text-[clamp(1.875rem,4vw,2.25rem)] font-semibold tracking-tight text-white mb-[clamp(1rem,2vw,1.5rem)]">
+                        Projetos & Case</h2>
+                    <p class="text-[clamp(1rem,1.5vw,1.125rem)] text-neutral-400 max-w-2xl font-geist-mono">Um pouco da
+                        minha realidade diária de produção.</p>
                 </div>
-                
+
                 <div class="space-y-12 w-full">
                     <!-- Project 1 (Surfguru) -->
                     <div class="group grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center reveal-up w-full">
                         <div class="order-2 lg:order-1 w-full">
                             <div class="flex flex-wrap items-center gap-2 mb-4">
-                                <span class="text-[10px] sm:text-xs text-neutral-500 font-geist-mono font-medium drop-shadow-sm">2024 / ATUAL</span>
+                                <span
+                                    class="text-[10px] sm:text-xs text-neutral-500 font-geist-mono font-medium drop-shadow-sm">2024
+                                    / ATUAL</span>
                                 <div class="hidden sm:block h-1 w-1 rounded-full bg-neutral-700"></div>
-                                <span class="text-[10px] sm:text-xs text-neutral-500 font-geist-mono font-medium">EM PRODUÇÃO</span>
+                                <span class="text-[10px] sm:text-xs text-neutral-500 font-geist-mono font-medium">EM
+                                    PRODUÇÃO</span>
                             </div>
                             <h3 class="text-2xl sm:text-3xl font-bold text-white mb-4">Surfguru Web</h3>
                             <p class="text-neutral-400 mb-6 leading-relaxed font-geist-mono text-sm sm:text-base">
-                                A maior plataforma de previsão de surf do Brasil. Minha atuação direta nela representa minha bagagem central de manutenção de código front-end (legado e moderno), em escala e no contato frequente com usuários diários.
+                                A maior plataforma de previsão de surf do Brasil. Minha atuação direta nela representa
+                                minha bagagem central de manutenção de código front-end (legado e moderno), em escala e
+                                no contato frequente com usuários diários.
                             </p>
                             <div class="flex flex-wrap gap-2 mb-8 w-full">
-                                <span class="px-3 py-1 text-[10px] sm:text-xs bg-white/5 text-neutral-300 border border-white/10 rounded-full font-geist-mono">HTML/CSS/JS</span>
-                                <span class="px-3 py-1 text-[10px] sm:text-xs bg-white/5 text-neutral-300 border border-white/10 rounded-full font-geist-mono">PHP (CakePHP 4)</span>
-                                <span class="px-3 py-1 text-[10px] sm:text-xs bg-white/5 text-neutral-300 border border-white/10 rounded-full font-geist-mono">MySQL</span>
+                                <span
+                                    class="px-3 py-1 text-[10px] sm:text-xs bg-white/5 text-neutral-300 border border-white/10 rounded-full font-geist-mono">HTML/CSS/JS</span>
+                                <span
+                                    class="px-3 py-1 text-[10px] sm:text-xs bg-white/5 text-neutral-300 border border-white/10 rounded-full font-geist-mono">PHP
+                                    (CakePHP 4)</span>
+                                <span
+                                    class="px-3 py-1 text-[10px] sm:text-xs bg-white/5 text-neutral-300 border border-white/10 rounded-full font-geist-mono">MySQL</span>
                             </div>
-                            <a class="inline-flex items-center gap-2 text-xs sm:text-sm font-semibold text-white hover:text-emerald-400 transition-colors border-b border-transparent hover:border-emerald-400 pb-0.5 w-max" href="https://surfguru.com.br" target="_blank">
+                            <a class="inline-flex items-center gap-2 text-xs sm:text-sm font-semibold text-white hover:text-emerald-400 transition-colors border-b border-transparent hover:border-emerald-400 pb-0.5 w-max"
+                                href="https://surfguru.com.br" target="_blank">
                                 Visitar plataforma <i class="w-4 h-4" data-lucide="arrow-right"></i>
                             </a>
                         </div>
                         <!-- Surfguru Screenshot corrected to object-contain with smooth padding -->
                         <div class="order-1 lg:order-2 w-full">
-                            <div class="rounded-2xl overflow-hidden border border-white/10 shadow-2xl bg-[#0a0a0a] group-hover:-translate-y-2 transition-transform duration-700 relative aspect-video md:aspect-[4/3] w-full group flex items-center justify-center p-3 sm:p-6">
-                                <img src="Surfguru%20home.jpg" alt="Surfguru UI Screenshot" class="w-full h-full object-contain object-center opacity-90 group-hover:opacity-100 group-hover:scale-[1.02] transition-all duration-700 relative z-0 rounded-lg">
+                            <div
+                                class="rounded-2xl overflow-hidden border border-white/10 shadow-2xl bg-[#0a0a0a] group-hover:-translate-y-2 transition-transform duration-700 relative aspect-video md:aspect-[4/3] w-full group flex items-center justify-center p-3 sm:p-6">
+                                <img src="Surfguru%20home.jpg" alt="Surfguru UI Screenshot"
+                                    class="w-full h-full object-contain object-center opacity-90 group-hover:opacity-100 group-hover:scale-[1.02] transition-all duration-700 relative z-0 rounded-lg">
                             </div>
                         </div>
                     </div>
@@ -417,26 +603,38 @@
                     <!-- Project 2 (Nova Era) -->
                     <div class="group grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center reveal-up w-full">
                         <div class="order-1 lg:order-1 w-full">
-                            <div class="rounded-2xl overflow-hidden border border-white/10 shadow-2xl bg-[#0a0a0a] group-hover:-translate-y-2 transition-transform duration-700 relative aspect-video md:aspect-[4/3] w-full group flex items-center justify-center p-3 sm:p-6">
-                                <img src="Nova_era.jpeg" alt="Nova Era Branding Studio" class="w-full h-full object-contain object-center opacity-90 group-hover:opacity-100 group-hover:scale-[1.02] transition-all duration-700 relative z-0 rounded-lg">
+                            <div
+                                class="rounded-2xl overflow-hidden border border-white/10 shadow-2xl bg-[#0a0a0a] group-hover:-translate-y-2 transition-transform duration-700 relative aspect-video md:aspect-[4/3] w-full group flex items-center justify-center p-3 sm:p-6">
+                                <img src="Nova_era.jpeg" alt="Nova Era Branding Studio"
+                                    class="w-full h-full object-contain object-center opacity-90 group-hover:opacity-100 group-hover:scale-[1.02] transition-all duration-700 relative z-0 rounded-lg">
                             </div>
                         </div>
                         <div class="order-2 lg:order-2 w-full">
                             <div class="flex flex-wrap items-center gap-2 mb-4">
-                                <span class="text-[10px] sm:text-xs text-neutral-500 font-geist-mono font-medium drop-shadow-sm">2025</span>
+                                <span
+                                    class="text-[10px] sm:text-xs text-neutral-500 font-geist-mono font-medium drop-shadow-sm">2025</span>
                                 <div class="hidden sm:block h-1 w-1 rounded-full bg-neutral-700"></div>
-                                <span class="text-[10px] sm:text-xs text-neutral-500 font-geist-mono font-medium">LANDING PAGE</span>
+                                <span
+                                    class="text-[10px] sm:text-xs text-neutral-500 font-geist-mono font-medium">LANDING
+                                    PAGE</span>
                             </div>
                             <h3 class="text-2xl sm:text-3xl font-bold text-white mb-4">Nova Era — Branding Studio</h3>
                             <p class="text-neutral-400 mb-6 leading-relaxed font-geist-mono text-sm sm:text-base">
-                                Landing page para estúdio de branding estratégico com design imersivo, animações GSAP, sistema de arquétipos interativo e identidade visual premium. Foco em conversão e posicionamento de marca.
+                                Landing page para estúdio de branding estratégico com design imersivo, animações GSAP,
+                                sistema de arquétipos interativo e identidade visual premium. Foco em conversão e
+                                posicionamento de marca.
                             </p>
                             <div class="flex flex-wrap gap-2 mb-8 w-full">
-                                <span class="px-3 py-1 text-[10px] sm:text-xs bg-white/5 text-neutral-300 border border-white/10 rounded-full font-geist-mono">HTML/CSS/JS</span>
-                                <span class="px-3 py-1 text-[10px] sm:text-xs bg-white/5 text-neutral-300 border border-white/10 rounded-full font-geist-mono">GSAP</span>
-                                <span class="px-3 py-1 text-[10px] sm:text-xs bg-white/5 text-neutral-300 border border-white/10 rounded-full font-geist-mono">Tailwind CSS</span>
+                                <span
+                                    class="px-3 py-1 text-[10px] sm:text-xs bg-white/5 text-neutral-300 border border-white/10 rounded-full font-geist-mono">HTML/CSS/JS</span>
+                                <span
+                                    class="px-3 py-1 text-[10px] sm:text-xs bg-white/5 text-neutral-300 border border-white/10 rounded-full font-geist-mono">GSAP</span>
+                                <span
+                                    class="px-3 py-1 text-[10px] sm:text-xs bg-white/5 text-neutral-300 border border-white/10 rounded-full font-geist-mono">Tailwind
+                                    CSS</span>
                             </div>
-                            <a class="inline-flex items-center gap-2 text-xs sm:text-sm font-semibold text-white hover:text-emerald-400 transition-colors border-b border-transparent hover:border-emerald-400 pb-0.5 w-max" href="https://nova-era-nine.vercel.app/" target="_blank">
+                            <a class="inline-flex items-center gap-2 text-xs sm:text-sm font-semibold text-white hover:text-emerald-400 transition-colors border-b border-transparent hover:border-emerald-400 pb-0.5 w-max"
+                                href="https://nova-era-nine.vercel.app/" target="_blank">
                                 Visitar projeto <i class="w-4 h-4" data-lucide="arrow-right"></i>
                             </a>
                         </div>
@@ -449,25 +647,34 @@
                     <div class="group grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center reveal-up w-full">
                         <div class="order-2 lg:order-1 w-full">
                             <div class="flex flex-wrap items-center gap-2 mb-4">
-                                <span class="text-[10px] sm:text-xs text-neutral-500 font-geist-mono font-medium drop-shadow-sm">2023</span>
+                                <span
+                                    class="text-[10px] sm:text-xs text-neutral-500 font-geist-mono font-medium drop-shadow-sm">2023</span>
                                 <div class="hidden sm:block h-1 w-1 rounded-full bg-neutral-700"></div>
-                                <span class="text-[10px] sm:text-xs text-neutral-500 font-geist-mono font-medium">SITE INSTITUCIONAL</span>
+                                <span class="text-[10px] sm:text-xs text-neutral-500 font-geist-mono font-medium">SITE
+                                    INSTITUCIONAL</span>
                             </div>
                             <h3 class="text-2xl sm:text-3xl font-bold text-white mb-4">FECAPGE</h3>
                             <p class="text-neutral-400 mb-6 leading-relaxed font-geist-mono text-sm sm:text-base">
-                                Site institucional da Feira Capixaba de Empresas do Setor de Petróleo, Gás e Energia. Plataforma informativa com programação de eventos, expositores e inscrições para a conferência.
+                                Site institucional da Feira Capixaba de Empresas do Setor de Petróleo, Gás e Energia.
+                                Plataforma informativa com programação de eventos, expositores e inscrições para a
+                                conferência.
                             </p>
                             <div class="flex flex-wrap gap-2 mb-8 w-full">
-                                <span class="px-3 py-1 text-[10px] sm:text-xs bg-white/5 text-neutral-300 border border-white/10 rounded-full font-geist-mono">HTML/CSS/JS</span>
-                                <span class="px-3 py-1 text-[10px] sm:text-xs bg-white/5 text-neutral-300 border border-white/10 rounded-full font-geist-mono">WordPress</span>
+                                <span
+                                    class="px-3 py-1 text-[10px] sm:text-xs bg-white/5 text-neutral-300 border border-white/10 rounded-full font-geist-mono">HTML/CSS/JS</span>
+                                <span
+                                    class="px-3 py-1 text-[10px] sm:text-xs bg-white/5 text-neutral-300 border border-white/10 rounded-full font-geist-mono">WordPress</span>
                             </div>
-                            <a class="inline-flex items-center gap-2 text-xs sm:text-sm font-semibold text-white hover:text-emerald-400 transition-colors border-b border-transparent hover:border-emerald-400 pb-0.5 w-max" href="https://fecapge.see.org.br/" target="_blank">
+                            <a class="inline-flex items-center gap-2 text-xs sm:text-sm font-semibold text-white hover:text-emerald-400 transition-colors border-b border-transparent hover:border-emerald-400 pb-0.5 w-max"
+                                href="https://fecapge.see.org.br/" target="_blank">
                                 Visitar projeto <i class="w-4 h-4" data-lucide="arrow-right"></i>
                             </a>
                         </div>
                         <div class="order-1 lg:order-2 w-full">
-                            <div class="rounded-2xl overflow-hidden border border-white/10 shadow-2xl bg-[#0a0a0a] group-hover:-translate-y-2 transition-transform duration-700 relative aspect-video md:aspect-[4/3] w-full group flex items-center justify-center p-3 sm:p-6">
-                                <img src="Fecapge.jpeg" alt="FECAPGE Website Screenshot" class="w-full h-full object-contain object-center opacity-90 group-hover:opacity-100 group-hover:scale-[1.02] transition-all duration-700 relative z-0 rounded-lg">
+                            <div
+                                class="rounded-2xl overflow-hidden border border-white/10 shadow-2xl bg-[#0a0a0a] group-hover:-translate-y-2 transition-transform duration-700 relative aspect-video md:aspect-[4/3] w-full group flex items-center justify-center p-3 sm:p-6">
+                                <img src="Fecapge.jpeg" alt="FECAPGE Website Screenshot"
+                                    class="w-full h-full object-contain object-center opacity-90 group-hover:opacity-100 group-hover:scale-[1.02] transition-all duration-700 relative z-0 rounded-lg">
                             </div>
                         </div>
                     </div>
@@ -476,26 +683,35 @@
         </section>
 
         <!-- Footer / Contact -->
-        <footer id="contato" class="relative bg-neutral-950 border-t border-white/10 px-[clamp(1.5rem,5vw,4rem)] lg:pl-28 z-10 w-full">
+        <footer id="contato"
+            class="relative bg-neutral-950 border-t border-white/10 px-[clamp(1.5rem,5vw,4rem)] lg:pl-28 z-10 w-full">
             <div class="mx-auto max-w-6xl py-[clamp(3rem,6vw,5rem)] w-full">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 justify-between items-start md:items-center">
+                <div
+                    class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 justify-between items-start md:items-center">
                     <div>
-                        <div class="font-bold text-base sm:text-lg tracking-tight text-white mb-2 flex items-center gap-2">
+                        <div
+                            class="font-bold text-base sm:text-lg tracking-tight text-white mb-2 flex items-center gap-2">
                             <i data-lucide="terminal" class="w-4 h-4 text-neutral-600"></i> JulioMota
                         </div>
-                        <p class="text-neutral-500 text-[10px] sm:text-sm font-geist-mono">© <span id="year"></span> Todos os direitos reservados. Foco em Front-end.</p>
+                        <p class="text-neutral-500 text-[10px] sm:text-sm font-geist-mono">© <span id="year"></span>
+                            Todos os direitos reservados. Foco em Front-end.</p>
                     </div>
-                    <div class="flex flex-col sm:flex-row gap-4 sm:gap-6 md:justify-end items-start sm:items-center text-xs sm:text-sm font-medium text-neutral-400 w-full">
-                        <div class="flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/5 text-emerald-400 border border-emerald-500/20 text-[10px] sm:text-xs font-geist-mono w-max">
+                    <div
+                        class="flex flex-col sm:flex-row gap-4 sm:gap-6 md:justify-end items-start sm:items-center text-xs sm:text-sm font-medium text-neutral-400 w-full">
+                        <div
+                            class="flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/5 text-emerald-400 border border-emerald-500/20 text-[10px] sm:text-xs font-geist-mono w-max">
                             <span class="relative flex h-2 w-2">
-                                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                                <span
+                                    class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
                                 <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
                             </span>
                             Disponível
                         </div>
                         <nav class="flex gap-4 sm:gap-6 font-geist-mono">
-                            <a class="hover:text-white transition" href="https://github.com/storckmota" target="_blank">GitHub</a>
-                            <a class="hover:text-white transition" href="https://www.linkedin.com/in/storckmota/" target="_blank">Linkedin</a>
+                            <a class="hover:text-white transition" href="https://github.com/storckmota"
+                                target="_blank">GitHub</a>
+                            <a class="hover:text-white transition" href="https://www.linkedin.com/in/storckmota/"
+                                target="_blank">Linkedin</a>
                         </nav>
                     </div>
                 </div>
@@ -671,22 +887,22 @@
         document.addEventListener('DOMContentLoaded', () => {
             const lines = [
                 { p: '<span class="text-purple-400">const</span> <span class="text-blue-400">techStack</span> = [', t: '', s: '' },
-                { p: '&nbsp;&nbsp;<span class="text-yellow-300">\'</span>', t: 'Frontend Developer', s: '<span class="text-yellow-300">\'</span>,' },
-                { p: '&nbsp;&nbsp;<span class="text-yellow-300">\'</span>', t: 'React + TypeScript', s: '<span class="text-yellow-300">\'</span>,' },
-                { p: '&nbsp;&nbsp;<span class="text-yellow-300">\'</span>', t: 'UI Engineering', s: '<span class="text-yellow-300">\'</span>,' },
-                { p: '&nbsp;&nbsp;<span class="text-yellow-300">\'</span>', t: 'Performance Focused', s: '<span class="text-yellow-300">\'</span>' },
+                { p: '&nbsp;&nbsp;<span class="text-yellow-300">\'</span>', t: 'Fullstack Developer', s: '<span class="text-yellow-300">\'</span>,' },
+                { p: '&nbsp;&nbsp;<span class="text-yellow-300">\'</span>', t: 'React & Next.js', s: '<span class="text-yellow-300">\'</span>,' },
+                { p: '&nbsp;&nbsp;<span class="text-yellow-300">\'</span>', t: 'Node.js & TypeScript', s: '<span class="text-yellow-300">\'</span>,' },
+                { p: '&nbsp;&nbsp;<span class="text-yellow-300">\'</span>', t: 'PostgreSQL & CI/CD', s: '<span class="text-yellow-300">\'</span>' },
                 { p: '];', t: '', s: '' }
             ];
 
             const container = document.getElementById('typewriter-container');
-            if(!container) return;
-            
+            if (!container) return;
+
             let lineIdx = 0;
 
             function typeLine() {
                 if (lineIdx >= lines.length) {
                     // Adiciona o cursor na última linha permanentemente quando terminar
-                    if(container.lastElementChild) {
+                    if (container.lastElementChild) {
                         container.lastElementChild.innerHTML += '<span class="typewriter-cursor">|</span>';
                     }
                     return;
@@ -722,9 +938,10 @@
                 }
                 setTimeout(typeChar, 100);
             }
-            
+
             setTimeout(typeLine, 800);
         });
     </script>
 </body>
+
 </html>
